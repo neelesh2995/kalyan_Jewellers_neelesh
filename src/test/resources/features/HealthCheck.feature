@@ -1,4 +1,4 @@
-@ui   @HealthCheck
+@ui @HealthCheck
 
 Feature:E-Commerce Website Health Check
 
@@ -12,11 +12,12 @@ Given User User validate the title
 @Searchproductvalidation
 Scenario: User search the product
 Given User search the product "majestic solitaire diamond ring"
-When User Validate the product from the suggest name
+When User Validate the product from the suggest name  
 
 @NxtPageValidation
 Scenario: User select the product
 Given User search the product "majestic solitaire diamond ring" 
+And User click the search product
 When User validate product page title
 Then Select the size of the product from the drop down "22"
 
